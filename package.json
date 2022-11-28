@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "blueimp-gallery": "^3.4.0",
+    "lightgallery": "^2.7.0"
+  }
+}

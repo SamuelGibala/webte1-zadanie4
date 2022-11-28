@@ -1,0 +1,23 @@
+.blueimp-gallery > .description {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    color: #fff;
+    display: none;
+}
+.blueimp-gallery-controls > .description {
+    display: block;
+}
+
+.core{
+    width: 70%;
+    margin: auto;
+}
+
+img{
+    margin: 5px;
+}
+
+body{
+    background-color: rgb(217, 217, 217);
+}
