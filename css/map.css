@@ -1,0 +1,18 @@
+.core{
+    width: 70%;
+    margin: 20px auto auto auto;
+}
+
+#map{
+    width: 100%;
+    min-height: 500px;
+}
+
+#links{
+    width: 150px;
+}
+
+img{
+    margin: 5px;
+    padding-right: 10px;
+}

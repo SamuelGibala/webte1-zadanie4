@@ -5,6 +5,12 @@
     <meta name = "viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
@@ -23,10 +29,22 @@
             <li class="nav-item">
                 <a class="nav-link" href="./index.html">Galéria</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./map.html">Mapa</a>
+            </li>
         </ul>
     </div>
 </div>
 </nav>
+
+<div class="search">
+    <div class="input-group rounded">
+        <input type="search" id="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+    </div>
+</div>
 
 <div class="core">
     <div id="links">
@@ -73,32 +91,11 @@
 </div>
 
 <script src="js/blueimp-gallery.min.js"></script>
-<script>
-    document.getElementById('links').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {
-                index: link, event: event,
-                onslide: function (index, slide) {
-
-                    self = this;
-                    var initializeAdditional = function (index, data, klass, self) {
-                        var text = self.list[index].getAttribute(data),
-                            node = self.container.find(klass);
-                        node.empty();
-                        if (text) {
-                            node[0].appendChild(document.createTextNode(text));
-                        }
-                    };
-                    initializeAdditional(index, 'data-description', '.description', self);
-                }
-            },
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-</script>
 <script src="script/photos.js"></script>
 <script src="script/imageLoader.js"></script>
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
+></script>
 </body>
 </html>

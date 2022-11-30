@@ -4,6 +4,7 @@
     left: 15px;
     color: #fff;
     display: none;
+    margin-top: 15px;
 }
 .blueimp-gallery-controls > .description {
     display: block;
@@ -20,4 +21,10 @@ img{
 
 body{
     background-color: rgb(217, 217, 217);
+}
+
+.search{
+    width: 50%;
+    margin: 10px auto 10px 15%;
+    min-width: 300px;
 }
