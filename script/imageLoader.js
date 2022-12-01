@@ -1,8 +1,8 @@
-photos = gallery.photos;
-pics = document.getElementById('links')
-picture = []
-pictureLink = []
-
+const photos = await fetch('./script/photos.json').then(r=>r.json())
+//var photos = gallery.photos;
+var pics = document.getElementById('links')
+var picture = []
+var pictureLink = []
 for (let i = 0; i < photos.length; i++) {
 
     pictureLink[i] = document.createElement("a")
@@ -46,7 +46,7 @@ document.getElementById('links').onclick = function (event) {
 
 
 
-search = document.getElementById('search');
+var search = document.getElementById('search');
 search.addEventListener('input',function (event){
     filter(search.value);
 })

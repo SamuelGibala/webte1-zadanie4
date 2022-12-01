@@ -1,3 +1,4 @@
+const pics = await fetch('./script/photos.json').then(r=>r.json())
 // Creating map options
 var mapOptions = {
     center: [49.089212, 19.699762],
@@ -15,10 +16,10 @@ map.addLayer(layer);
 
 var jsonFeatures = [];
 
-var pics = gallery.photos;
+//var pics = photos;
 
-locations = []
-points = [];
+var locations = []
+var points = [];
 
 function makeLocations(){
 
@@ -79,7 +80,7 @@ locations.forEach(function(point){
 function makeGallery(num){
 
     let place = parseInt(num);
-    output = "";
+    var output = "";
 
     output = "<div id='links'>";
 
@@ -103,7 +104,7 @@ layer = L.geoJson(geoJson,{
     }
 }).addTo(map);
 
-button = document.getElementById('trasa');
+var button = document.getElementById('trasa');
 
 var clicked = false;
 
